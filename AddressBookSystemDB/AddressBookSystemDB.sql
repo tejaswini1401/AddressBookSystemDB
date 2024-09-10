@@ -28,5 +28,8 @@ SELECT * FROM AddressBookSystem;
 
 SET SQL_SAFE_UPDATES = 0;
 UPDATE AddressBookSystem SET address = "Panvel", city = "Mumbai", state = "Maharastra", zip = "410106" WHERE firstname = "Samrudhhi" AND lastname = "Bendugade";
-SET SQL_SAFE_UPDATES = 1;
        
+DELETE FROM AddressBookSystem WHERE firstname = "Divyen";
+SET SQL_SAFE_UPDATES = 1;
+
+SELECT * FROM AddressBookSystem;
