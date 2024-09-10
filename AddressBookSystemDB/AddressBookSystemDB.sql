@@ -26,4 +26,7 @@ VALUES ("Tejaswini", "Shelake", "Hinjwadi","Pune", "Maharastra", "411004", "1234
 
 SELECT * FROM AddressBookSystem;
 
+SET SQL_SAFE_UPDATES = 0;
+UPDATE AddressBookSystem SET address = "Panvel", city = "Mumbai", state = "Maharastra", zip = "410106" WHERE firstname = "Samrudhhi" AND lastname = "Bendugade";
+SET SQL_SAFE_UPDATES = 1;
        
