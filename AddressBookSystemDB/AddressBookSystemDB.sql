@@ -34,4 +34,6 @@ SET SQL_SAFE_UPDATES = 1;
 
 SELECT * FROM AddressBookSystem;
 
-SELECT * FROM AddressBookSystem WHERE city = "Pune" OR state = "Maharastara";
+SELECT * FROM AddressBookSystem WHERE city = "Pune";
+
+SELECT city, state, COUNT(*) AS count FROM 	AddressBookSystem GROUP BY city, state;
