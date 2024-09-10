@@ -33,3 +33,5 @@ DELETE FROM AddressBookSystem WHERE firstname = "Divyen";
 SET SQL_SAFE_UPDATES = 1;
 
 SELECT * FROM AddressBookSystem;
+
+SELECT * FROM AddressBookSystem WHERE city = "Pune" OR state = "Maharastara";
