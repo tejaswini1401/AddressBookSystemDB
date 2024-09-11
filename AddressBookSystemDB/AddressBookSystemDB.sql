@@ -46,3 +46,5 @@ UPDATE AddressBookSystem SET bookname = "Friends" WHERE firstname = 'Divya' OR f
 UPDATE AddressBookSystem SET bookname = "Professional" WHERE firstname = 'Divyen' OR firstName = 'Hitesh';
 
 SELECT * FROM AddressBookSystem;
+
+SELECT booktype, count(*) AS contacts_count FROM AddressBookSystem GROUP BY booktype;
