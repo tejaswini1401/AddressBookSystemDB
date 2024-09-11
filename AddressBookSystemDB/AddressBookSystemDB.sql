@@ -48,3 +48,10 @@ UPDATE AddressBookSystem SET bookname = "Professional" WHERE firstname = 'Divyen
 SELECT * FROM AddressBookSystem;
 
 SELECT booktype, count(*) AS contacts_count FROM AddressBookSystem GROUP BY booktype;
+
+INSERT INTO AddressBookSystem(booktype,bookname,firstname,lastname,address,city,state,zip,phoneNo,email) VALUES
+("Professional", "Professional Book", "Ashwini", "Garad", "Wakad", "Pune", "Maharastra", "411004", "1243568709", "ashwini.garad@gmail.com"),
+("Family", "Family Book", "Abhilasha", "Chavan", "Hadapsar", "Pune", "Maharastra", "411013", "1234568709", "abhilasha.chavan@gmail.com");
+
+SELECT * FROM AddressBookSystem;
+
