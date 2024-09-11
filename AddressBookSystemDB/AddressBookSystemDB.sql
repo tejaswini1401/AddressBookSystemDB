@@ -30,7 +30,6 @@ SET SQL_SAFE_UPDATES = 0;
 UPDATE AddressBookSystem SET address = "Panvel", city = "Mumbai", state = "Maharastra", zip = "410106" WHERE firstname = "Samrudhhi" AND lastname = "Bendugade";
        
 DELETE FROM AddressBookSystem WHERE firstname = "Divyen";
-SET SQL_SAFE_UPDATES = 1;
 
 SELECT * FROM AddressBookSystem;
 
@@ -39,3 +38,11 @@ SELECT * FROM AddressBookSystem WHERE city = "Pune";
 SELECT city, state, COUNT(*) AS count FROM 	AddressBookSystem GROUP BY city, state;
 
 SELECT firstname, lastname, city FROM AddressBookSystem WHERE city = "Pune" ORDER BY firstname;
+
+ALTER TABLE AddressBookSystem ADD COLUMN bookname VARCHAR(50) AFTER id,ADD COLUMN booktype VARCHAR(50) AFTER bookname;
+
+UPDATE AddressBookSystem SET bookname = "Family" WHERE firstname = 'Manish' OR firstName = 'Tejaswini';
+UPDATE AddressBookSystem SET bookname = "Friends" WHERE firstname = 'Divya' OR firstName = 'Samrudhhi';
+UPDATE AddressBookSystem SET bookname = "Professional" WHERE firstname = 'Divyen' OR firstName = 'Hitesh';
+
+SELECT * FROM AddressBookSystem;
